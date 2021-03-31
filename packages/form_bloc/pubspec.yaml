@@ -20,7 +20,7 @@ dependencies:
   pedantic: ^1.8.0+1
   quiver: ^2.0.5
   rxdart: ^0.24.1
-  uuid: ^3.0.2
+  uuid: ^3.0.3
 
 dev_dependencies:
   test: ^1.6.0
