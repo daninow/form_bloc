@@ -866,7 +866,14 @@ class _TypeAheadFieldState<T> extends State<TypeAheadField<T>>
         showCursor: widget.textFieldConfiguration.showCursor,
         strutStyle: widget.textFieldConfiguration.strutStyle,
         textAlignVertical: widget.textFieldConfiguration.textAlignVertical,
-        toolbarOptions: widget.textFieldConfiguration.toolbarOptions,
+        contextMenuBuilder: (context, editableTextState) {
+          final List<ContextMenuButtonItem> buttonItems =
+              editableTextState.contextMenuButtonItems;
+          return AdaptiveTextSelectionToolbar.buttonItems(
+            anchors: editableTextState.contextMenuAnchors,
+            buttonItems: buttonItems,
+          );
+        },
       ),
     );
   }
