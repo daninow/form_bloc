@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:form_bloc/form_bloc.dart' as form_bloc;
 
 typedef FormBlocListenerCallback<
-        FormBlocState extends form_bloc
-            .FormBlocState<SuccessResponse, ErrorResponse>,
+        FormBlocState2 extends form_bloc
+        .FormBlocState<SuccessResponse, ErrorResponse>,
         SuccessResponse,
         ErrorResponse>
-    = void Function(BuildContext context, FormBlocState state);
+    = void Function(BuildContext context, FormBlocState2 state);
 
 /// [BlocListener] that reacts to the state changes of the FormBloc.
 class FormBlocListener<
@@ -73,8 +73,8 @@ class FormBlocListener<
                     .FormBlocDeleteFailed<SuccessResponse, ErrorResponse> &&
                 onDeleteFailed != null) {
               onDeleteFailed(context, state);
-            } else if (state
-                    is form_bloc.FormBlocDeleteSuccessful<SuccessResponse, ErrorResponse> &&
+            } else if (state is form_bloc
+                    .FormBlocDeleteSuccessful<SuccessResponse, ErrorResponse> &&
                 onDeleteSuccessful != null) {
               onDeleteSuccessful(context, state);
             }
