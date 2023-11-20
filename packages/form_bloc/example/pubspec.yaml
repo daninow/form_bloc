@@ -4,11 +4,10 @@ version: 1.0.0+1
 publish_to: 'none'
 
 environment:
-  sdk: ">=2.19.4 <3.0.0"
+  sdk: ">=2.19.4 <4.0.0"
 
 dependencies:
-  form_bloc:
-    path: ../
+  form_bloc: ^0.30.0
 
 dev_dependencies:
   lints: ^1.0.1
