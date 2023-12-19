@@ -1,10 +1,12 @@
 import 'dart:async';
 
+import 'package:bloc/bloc.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:form_bloc/form_bloc.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:test/test.dart';
 
+import '../utils/my_bloc_delegate.dart';
 import '../utils/states.dart';
 import '../utils/when_bloc.dart';
 
@@ -15,9 +17,9 @@ class _FormBlocImpl extends FormBloc<String, String> with Mock {
   );
 
   _FormBlocImpl({
-    super.isLoading,
-    super.autoValidate,
-  });
+    bool isLoading = false,
+    bool autoValidate = true,
+  }) : super(isLoading: isLoading, autoValidate: autoValidate);
 
   @override
   FutureOr<void> onLoading() {
