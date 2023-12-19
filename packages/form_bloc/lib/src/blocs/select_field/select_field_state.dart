@@ -5,21 +5,35 @@ class SelectFieldBlocState<Value, ExtraData>
   final List<Value> items;
 
   SelectFieldBlocState({
-    required super.isValueChanged,
-    required super.initialValue,
-    required super.updatedValue,
-    required super.value,
-    required super.error,
-    required super.isDirty,
-    required super.suggestions,
-    required super.isValidated,
-    required super.isValidating,
-    super.formBloc,
-    required super.name,
+    required bool isValueChanged,
+    required Value? initialValue,
+    required Value? updatedValue,
+    required Value? value,
+    required Object? error,
+    required bool isDirty,
+    required Suggestions<Value>? suggestions,
+    required bool isValidated,
+    required bool isValidating,
+    FormBloc? formBloc,
+    required String name,
     this.items = const [],
-    super.toJson,
-    super.extraData,
-  });
+    dynamic Function(Value? value)? toJson,
+    ExtraData? extraData,
+  }) : super(
+          isValueChanged: isValueChanged,
+          initialValue: initialValue,
+          updatedValue: updatedValue,
+          value: value,
+          error: error,
+          isDirty: isDirty,
+          suggestions: suggestions,
+          isValidated: isValidated,
+          isValidating: isValidating,
+          formBloc: formBloc,
+          name: name,
+          toJson: toJson,
+          extraData: extraData,
+        );
 
   @override
   SelectFieldBlocState<Value, ExtraData> copyWith({

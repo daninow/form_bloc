@@ -5,13 +5,19 @@ class ListFieldBlocState<T extends FieldBloc, ExtraData>
   final List<T> fieldBlocs;
 
   ListFieldBlocState({
-    required super.formBloc,
-    required super.name,
-    required super.isValidating,
-    required super.isValid,
-    required super.extraData,
+    required FormBloc? formBloc,
+    required String name,
+    required bool isValidating,
+    required bool isValid,
+    required ExtraData? extraData,
     required this.fieldBlocs,
-  });
+  }) : super(
+          formBloc: formBloc,
+          name: name,
+          isValidating: isValidating,
+          isValid: isValid,
+          extraData: extraData,
+        );
 
   @override
   ListFieldBlocState<T, ExtraData> copyWith({

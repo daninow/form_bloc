@@ -3,21 +3,35 @@ part of '../field/field_bloc.dart';
 class InputFieldBlocState<Value, ExtraData>
     extends FieldBlocState<Value, Value, ExtraData?> {
   InputFieldBlocState({
-    required super.isValueChanged,
-    required super.initialValue,
-    required super.updatedValue,
-    required super.value,
-    required super.error,
-    required super.isDirty,
-    required super.suggestions,
-    required super.isValidated,
-    required super.isValidating,
-    super.formBloc,
-    required super.name,
+    required bool isValueChanged,
+    required Value initialValue,
+    required Value updatedValue,
+    required Value value,
+    required Object? error,
+    required bool isDirty,
+    required Suggestions<Value>? suggestions,
+    required bool isValidated,
+    required bool isValidating,
+    FormBloc? formBloc,
+    required String name,
     List additionalProps = const <dynamic>[],
-    super.toJson,
-    super.extraData,
-  });
+    dynamic Function(Value value)? toJson,
+    ExtraData? extraData,
+  }) : super(
+          isValueChanged: isValueChanged,
+          initialValue: initialValue,
+          updatedValue: updatedValue,
+          value: value,
+          error: error,
+          isDirty: isDirty,
+          suggestions: suggestions,
+          isValidated: isValidated,
+          isValidating: isValidating,
+          formBloc: formBloc,
+          name: name,
+          toJson: toJson,
+          extraData: extraData,
+        );
 
   @override
   InputFieldBlocState<Value, ExtraData> copyWith({
