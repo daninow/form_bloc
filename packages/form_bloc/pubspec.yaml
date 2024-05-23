@@ -17,7 +17,8 @@ dependencies:
   uuid: ^4.4.0
 
 dev_dependencies:
-  test: ^1.25.5
+  flutter_test:
+    sdk: flutter
   mocktail: ^1.0.3
   bloc_test: ^9.1.7
   fire_line_diff: ^1.5.5
