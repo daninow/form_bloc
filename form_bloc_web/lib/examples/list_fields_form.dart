@@ -260,9 +260,7 @@ class ListFieldsForm extends StatelessWidget {
                             child: const Text('ADD MEMBER'),
                           ),
                           ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.red,
-                            ),
+                            style: ElevatedButton.styleFrom(),
                             onPressed: formBloc.clearMember,
                             child: const Text('CLEAR MEMBER'),
                           ),
@@ -378,7 +376,7 @@ class MemberCard extends StatelessWidget {
                   child: const Text('ADD HOBBY'),
                 ),
                 TextButton(
-                  style: TextButton.styleFrom(primary: Colors.red),
+                  style: TextButton.styleFrom(),
                   onPressed: onClearHobby,
                   child: const Text('CLEAR HOBBY'),
                 ),
