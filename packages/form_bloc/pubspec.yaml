@@ -22,4 +22,4 @@ dev_dependencies:
   mocktail: ^1.0.4
   bloc_test: ^10.0.0
   fire_line_diff: ^1.5.5
-  lints: ^5.1.1
+  lints: ^6.0.0
