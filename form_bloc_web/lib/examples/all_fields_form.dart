@@ -82,7 +82,7 @@ class AllFieldsForm extends StatelessWidget {
 
           return Theme(
             data: Theme.of(context).copyWith(
-              inputDecorationTheme: InputDecorationTheme(
+              inputDecorationTheme: InputDecorationThemeData(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),

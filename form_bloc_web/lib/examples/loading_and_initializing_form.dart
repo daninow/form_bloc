@@ -80,7 +80,7 @@ class LoadingForm extends StatelessWidget {
 
           return Theme(
             data: Theme.of(context).copyWith(
-              inputDecorationTheme: InputDecorationTheme(
+              inputDecorationTheme: InputDecorationThemeData(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -116,10 +116,12 @@ class LoadingForm extends StatelessWidget {
                         child: SingleChildScrollView(
                           child: Column(
                             children: <Widget>[
-                              const Icon(Icons.sentiment_dissatisfied, size: 70),
+                              const Icon(Icons.sentiment_dissatisfied,
+                                  size: 70),
                               const SizedBox(height: 20),
                               Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 12),
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 12),
                                 alignment: Alignment.center,
                                 child: Text(
                                   state.failureResponse ??

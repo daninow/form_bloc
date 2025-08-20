@@ -111,7 +111,7 @@ class ConditionalFieldsForm extends StatelessWidget {
 
           return Theme(
             data: Theme.of(context).copyWith(
-              inputDecorationTheme: InputDecorationTheme(
+              inputDecorationTheme: InputDecorationThemeData(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -170,7 +170,8 @@ class ConditionalFieldsForm extends StatelessWidget {
                                 FieldBlocBuilderControlAffinity.trailing,
                             body: Container(
                               alignment: Alignment.center,
-                              child: const Text('Do you want to see a secret field?'),
+                              child: const Text(
+                                  'Do you want to see a secret field?'),
                             ),
                           ),
                         ),
@@ -249,7 +250,8 @@ class SuccessScreen extends StatelessWidget {
             const SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (_) => const ConditionalFieldsForm())),
+                  MaterialPageRoute(
+                      builder: (_) => const ConditionalFieldsForm())),
               icon: const Icon(Icons.replay),
               label: const Text('AGAIN'),
             ),

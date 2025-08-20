@@ -122,7 +122,7 @@ class _WizardFormState extends State<WizardForm> {
         builder: (context) {
           return Theme(
             data: Theme.of(context).copyWith(
-              inputDecorationTheme: InputDecorationTheme(
+              inputDecorationTheme: InputDecorationThemeData(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -143,13 +143,14 @@ class _WizardFormState extends State<WizardForm> {
               body: SafeArea(
                 child: FormBlocListener<WizardFormBloc, String, String>(
                   onSubmitting: (context, state) => LoadingDialog.show(context),
-                  onSubmissionFailed: (context, state) => LoadingDialog.hide(context),
+                  onSubmissionFailed: (context, state) =>
+                      LoadingDialog.hide(context),
                   onSuccess: (context, state) {
                     LoadingDialog.hide(context);
 
                     if (state.stepCompleted == state.lastStep) {
-                      Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (_) => const SuccessScreen()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (_) => const SuccessScreen()));
                     }
                   },
                   onFailure: (context, state) {
