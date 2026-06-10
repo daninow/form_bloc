@@ -19,10 +19,10 @@ dependencies:
       url: https://github.com/daninow/form_bloc
       ref: master
       path: packages/form_bloc
-  equatable: ^2.0.7
+  equatable: ^2.0.8
   rxdart: ^0.28.0
   collection: ^1.19.1
-  flutter_keyboard_visibility: ^6.0.0
+  flutter_keyboard_visibility_temp_fork: ^0.1.5
   intl: ^0.20.2
   
 dev_dependencies:
